@@ -2,7 +2,7 @@
 import { Markdown } from "astro-remote";
 import CodeSpan from "../components/CodeSpan.astro";
 import CodeBlock from "../components/CodeBlock.astro";
-import Heading from "../components/Heading.astro";
+import StralightHeading from "../components/StralightHeading.astro";
 import Note from "../components/Note.astro";
 import markedAlert from "marked-alert";
 import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
@@ -16,7 +16,7 @@ const readme = await fetch(
   <Markdown
     sanitize={{ allowComponents: true }}
     content={readme}
-    components={{ Heading, CodeBlock, CodeSpan, Note }}
+    components={{ StralightHeading, CodeBlock, CodeSpan, Note }}
     marked={{ extensions: [markedAlert()] }}
   />
 </StarlightPage>

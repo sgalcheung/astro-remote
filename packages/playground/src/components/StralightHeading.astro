@@ -1,0 +1,12 @@
+---
+import AnchorHeading from "@astrojs/starlight/components/AnchorHeading.astro";
+import Slugger from "github-slugger";
+
+const { as: tag, text } = Astro.props;
+const number = tag.match(/^h(\d+)$/)?.[1];
+
+const slugger = new Slugger();
+const slug = slugger.slug(text);
+---
+
+<AnchorHeading level={number} id={slug}><slot /></AnchorHeading>
