@@ -8,7 +8,12 @@ import starlight from "@astrojs/starlight";
 export default defineConfig({
   output: "server",
   adapter: netlify(),
-  integrations: [starlight({
-    title: "Test"
-  })]
+  integrations: [
+    starlight({
+      title: "Test",
+      expressiveCode: {
+        removeUnusedThemes: false,
+      }
+    })
+  ]
 });
