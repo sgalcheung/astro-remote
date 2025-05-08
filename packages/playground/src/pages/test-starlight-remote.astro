@@ -16,7 +16,7 @@ const readme = await fetch(
   <Markdown
     sanitize={{ allowComponents: true }}
     content={readme}
-    components={{ StralightHeading, CodeBlock, CodeSpan, Note }}
+    components={{ Heading: StralightHeading, CodeBlock, CodeSpan, Note }}
     marked={{ extensions: [markedAlert()] }}
   />
 </StarlightPage>
